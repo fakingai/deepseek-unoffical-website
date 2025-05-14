@@ -9,6 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  output: 'export', // 启用静态导出
+  distDir: 'out',   // 指定输出目录
 }
 
 export default nextConfig
