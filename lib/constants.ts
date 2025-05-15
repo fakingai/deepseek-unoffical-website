@@ -14,7 +14,9 @@ export const LINKS = {
 		IOS_TESTFLIGHT:
 			process.env.NEXT_PUBLIC_DOWNLOAD_IOS_TESTFLIGHT ||
 			"https://apps.apple.com/app/testflight/id899247664",
-		WEB: process.env.NEXT_PUBLIC_APP_WEB_URL || "#",
+		WEB:
+			process.env.NEXT_PUBLIC_APP_WEB_URL ||
+			"https://deepseek-web.fakingai.com/",
 	},
 
 	// Social links
