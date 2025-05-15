@@ -1,18 +1,34 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import { Apple, Chrome, Download, Github, Globe, Laptop, MessageCircle, Smartphone, Zap } from "lucide-react"
+import { useState } from "react";
+import Link from "next/link";
+import {
+  Apple,
+  Chrome,
+  Download,
+  Github,
+  Globe,
+  Laptop,
+  MessageCircle,
+  Smartphone,
+  Zap,
+} from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { TestFlightModal } from "@/components/testflight-modal"
-import { QRCodeHover } from "@/components/qr-code-hover"
-import { LINKS } from "@/lib/constants"
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { TestFlightModal } from "@/components/testflight-modal";
+import { QRCodeHover } from "@/components/qr-code-hover";
+import { LINKS } from "@/lib/constants";
 
 export default function Home() {
-  const [testFlightModalOpen, setTestFlightModalOpen] = useState(false)
+  const [testFlightModalOpen, setTestFlightModalOpen] = useState(false);
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -48,8 +64,18 @@ export default function Home() {
           </div>
           <div className="flex flex-1 items-center justify-end space-x-4">
             <nav className="flex items-center space-x-2">
-              <Button asChild variant="outline" size="icon" className="rounded-full">
-                <a href={LINKS.SOCIAL.GITHUB} target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Button
+                asChild
+                variant="outline"
+                size="icon"
+                className="rounded-full"
+              >
+                <a
+                  href={LINKS.SOCIAL.GITHUB}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
@@ -63,19 +89,29 @@ export default function Home() {
       <main className="flex-1">
         <section className="relative overflow-hidden bg-black pb-8 pt-6 text-white md:pb-12 md:pt-10 lg:py-32">
           <div className="container relative flex max-w-[64rem] flex-col items-center gap-4 text-center">
-            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">deepseekClone</h1>
+            <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+              deepseekClone
+            </h1>
             <p className="max-w-[42rem] leading-normal text-gray-400 sm:text-xl sm:leading-8">
-              An unofficial deepseek Flutter client. Get intelligent answers anytime, anywhere to improve productivity
-              and solve problems.
+              An unofficial deepseek Flutter client. Get intelligent answers
+              anytime, anywhere to improve productivity and solve problems.
             </p>
             <div className="flex space-x-4">
-              <Button asChild size="lg" className="bg-green-600 hover:bg-green-700">
+              <Button
+                asChild
+                size="lg"
+                className="bg-green-600 hover:bg-green-700"
+              >
                 <Link href="#download" className="flex items-center">
                   <Download className="mr-2 h-4 w-4" />
                   Download Now
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-green-600 text-green-600 hover:bg-green-600/10">
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-green-600 text-green-600 hover:bg-green-600/10"
+              >
                 <Link href="#features" className="flex items-center">
                   Learn More
                 </Link>
@@ -89,57 +125,71 @@ export default function Home() {
               Intelligent Conversations, Efficient Solutions
             </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              deepseekClone is an unofficial deepseek Flutter client, developed with the Flutter framework to provide a
-              smooth cross-platform experience. Whether for work, study, or daily life, it's here to help.
+              deepseekClone is an unofficial deepseek Flutter client, developed
+              with the Flutter framework to provide a smooth cross-platform
+              experience. Whether for work, study, or daily life, it's here to
+              help.
             </p>
           </div>
           <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-            <Card className="flex h-[180px] flex-col justify-between border-2 border-green-600">
+            <Card className="flex h-[200px] flex-col justify-between border-2 border-green-600">
               <CardHeader>
                 <Zap className="h-5 w-5 text-green-600" />
                 <CardTitle className="mt-2">Fast Response</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Second-level responses, no waiting, get the information you need instantly
+                <p className="text-muted-foreground text-sm">
+                  Second-level responses, no waiting, get the information you
+                  need instantly
                 </p>
               </CardContent>
             </Card>
-            <Card className="flex h-[180px] flex-col justify-between border-2 border-green-600">
+            <Card className="flex h-[200px] flex-col justify-between border-2 border-green-600">
               <CardHeader>
                 <Globe className="h-5 w-5 text-green-600" />
                 <CardTitle className="mt-2">Multi-language Support</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Supports multiple languages including English, Chinese, and more
+                <p className="text-muted-foreground text-sm">
+                  Supports multiple languages including English, Chinese, and
+                  more
                 </p>
               </CardContent>
             </Card>
-            <Card className="flex h-[180px] flex-col justify-between border-2 border-green-600">
+            <Card className="flex h-[200px] flex-col justify-between border-2 border-green-600">
               <CardHeader>
                 <Laptop className="h-5 w-5 text-green-600" />
-                <CardTitle className="mt-2">Multi-platform Compatibility</CardTitle>
+                <CardTitle className="mt-2">
+                  Multi-platform Compatibility
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">
-                  Developed with Flutter, supports Web, macOS, Windows, Android, and iOS
+                <p className="text-muted-foreground text-sm">
+                  Developed with Flutter, supports Web, macOS, Windows, Android,
+                  and iOS
                 </p>
               </CardContent>
             </Card>
           </div>
           <div className="mx-auto text-center md:max-w-[58rem]">
             <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-              deepseekClone is an open-source project. Community contributions and improvements are welcome.
+              deepseekClone is an open-source project. Community contributions
+              and improvements are welcome.
             </p>
           </div>
         </section>
-        <section id="features" className="bg-gray-50 dark:bg-gray-900 py-8 md:py-12 lg:py-24">
+        <section
+          id="features"
+          className="bg-gray-50 dark:bg-gray-900 py-8 md:py-12 lg:py-24"
+        >
           <div className="container">
             <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-              <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">Powerful Features</h2>
+              <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">
+                Powerful Features
+              </h2>
               <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-                Explore the powerful features of deepseekClone to enhance your work and life efficiency
+                Explore the powerful features of deepseekClone to enhance your
+                work and life efficiency
               </p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12">
@@ -152,31 +202,39 @@ export default function Home() {
                 },
                 {
                   title: "Flutter Native",
-                  description: "Developed with the Flutter framework for a smooth cross-platform experience",
+                  description:
+                    "Developed with the Flutter framework for a smooth cross-platform experience",
                   icon: <Zap className="h-10 w-10" />,
                 },
                 {
                   title: "Offline Use",
-                  description: "Supports offline mode for use without an internet connection",
+                  description:
+                    "Supports offline mode for use without an internet connection",
                   icon: <Download className="h-10 w-10" />,
                 },
                 {
                   title: "Data Security",
-                  description: "Strict data encryption and privacy protection measures",
+                  description:
+                    "Strict data encryption and privacy protection measures",
                   icon: <Laptop className="h-10 w-10" />,
                 },
                 {
                   title: "Open Source",
-                  description: "Completely open source, welcoming community contributions and improvements",
+                  description:
+                    "Completely open source, welcoming community contributions and improvements",
                   icon: <Globe className="h-10 w-10" />,
                 },
                 {
                   title: "Customizable Interface",
-                  description: "Customize the interface and features according to your needs",
+                  description:
+                    "Customize the interface and features according to your needs",
                   icon: <Smartphone className="h-10 w-10" />,
                 },
               ].map((feature, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
+                <div
+                  key={index}
+                  className="flex flex-col items-center text-center"
+                >
                   <div className="mb-4 rounded-full bg-green-100 p-4 text-green-600 dark:bg-green-900/30 dark:text-green-400">
                     {feature.icon}
                   </div>
@@ -189,7 +247,9 @@ export default function Home() {
         </section>
         <section id="download" className="container py-8 md:py-12 lg:py-24">
           <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-            <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">Download Now</h2>
+            <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">
+              Download Now
+            </h2>
             <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
               Choose your platform and start using deepseekClone
             </p>
@@ -211,11 +271,20 @@ export default function Home() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">For macOS 10.15 and above</p>
+                      <p className="text-muted-foreground">
+                        For macOS 10.15 and above
+                      </p>
                     </CardContent>
                     <CardFooter>
-                      <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                        <a href={LINKS.DOWNLOAD.MACOS} download className="flex items-center justify-center">
+                      <Button
+                        asChild
+                        className="w-full bg-green-600 hover:bg-green-700"
+                      >
+                        <a
+                          href={LINKS.DOWNLOAD.MACOS}
+                          download
+                          className="flex items-center justify-center"
+                        >
                           <Download className="mr-2 h-4 w-4" />
                           Download for macOS
                         </a>
@@ -230,11 +299,20 @@ export default function Home() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">For Windows 10 and above</p>
+                      <p className="text-muted-foreground">
+                        For Windows 10 and above
+                      </p>
                     </CardContent>
                     <CardFooter>
-                      <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                        <a href={LINKS.DOWNLOAD.WINDOWS} download className="flex items-center justify-center">
+                      <Button
+                        asChild
+                        className="w-full bg-green-600 hover:bg-green-700"
+                      >
+                        <a
+                          href={LINKS.DOWNLOAD.WINDOWS}
+                          download
+                          className="flex items-center justify-center"
+                        >
                           <Download className="mr-2 h-4 w-4" />
                           Download for Windows
                         </a>
@@ -253,7 +331,9 @@ export default function Home() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">For iOS 14.0 and above</p>
+                      <p className="text-muted-foreground">
+                        For iOS 14.0 and above
+                      </p>
                     </CardContent>
                     <CardFooter>
                       <Button
@@ -273,10 +353,15 @@ export default function Home() {
                       </div>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-muted-foreground">For Android 8.0 and above</p>
+                      <p className="text-muted-foreground">
+                        For Android 8.0 and above
+                      </p>
                     </CardContent>
                     <CardFooter>
-                      <QRCodeHover title="Download for Android" description="Hover to view QR code, scan to download" />
+                      <QRCodeHover
+                        title="Download for Android"
+                        description="Hover to view QR code, scan to download"
+                      />
                     </CardFooter>
                   </Card>
                 </div>
@@ -290,11 +375,19 @@ export default function Home() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">No download needed, use directly in your browser</p>
+                    <p className="text-muted-foreground">
+                      No download needed, use directly in your browser
+                    </p>
                   </CardContent>
                   <CardFooter>
-                    <Button asChild className="w-full bg-green-600 hover:bg-green-700 flex items-center justify-center">
-                      <a href={LINKS.DOWNLOAD.WEB} className="flex items-center justify-center">
+                    <Button
+                      asChild
+                      className="w-full bg-green-600 hover:bg-green-700 flex items-center justify-center"
+                    >
+                      <a
+                        href={LINKS.DOWNLOAD.WEB}
+                        className="flex items-center justify-center"
+                      >
                         <Globe className="mr-2 h-4 w-4" />
                         Use Web Version
                       </a>
@@ -305,10 +398,15 @@ export default function Home() {
             </Tabs>
           </div>
         </section>
-        <section id="faq" className="bg-gray-50 dark:bg-gray-900 py-8 md:py-12 lg:py-24">
+        <section
+          id="faq"
+          className="bg-gray-50 dark:bg-gray-900 py-8 md:py-12 lg:py-24"
+        >
           <div className="container">
             <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-              <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">
+                Frequently Asked Questions
+              </h2>
               <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
                 Common questions about deepseekClone
               </p>
@@ -367,7 +465,8 @@ export default function Home() {
       <footer className="border-t py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            &copy; {new Date().getFullYear()} deepseekClone - Unofficial Flutter Client. All rights reserved.
+            &copy; {new Date().getFullYear()} deepseekClone - Unofficial Flutter
+            Client. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link
@@ -392,7 +491,10 @@ export default function Home() {
         </div>
       </footer>
 
-      <TestFlightModal open={testFlightModalOpen} onOpenChange={setTestFlightModalOpen} />
+      <TestFlightModal
+        open={testFlightModalOpen}
+        onOpenChange={setTestFlightModalOpen}
+      />
     </div>
-  )
+  );
 }
