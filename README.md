@@ -55,20 +55,20 @@ deepseekClone is an unofficial deepseek Flutter client, developed with the Flutt
 
 1. Clone the repository:
 
-\`\`\`bash
+```bash
 git clone https://github.com/fakingai/deepseek-clone.git
 cd deepseek-clone
-\`\`\`
+```
 
 2. Install dependencies:
 
-\`\`\`bash
+```bash
 flutter pub get
-\`\`\`
+```
 
 3. Run the application:
 
-\`\`\`bash
+```bash
 # For web
 flutter run -d chrome
 
@@ -77,7 +77,7 @@ flutter run -d macos  # or windows/linux
 
 # For mobile
 flutter run -d android  # or ios
-\`\`\`
+```
 
 ### Download Prebuilt Binaries
 
@@ -93,7 +93,7 @@ You can download the latest prebuilt binaries for your platform:
 
 ### Project Structure
 
-\`\`\`
+```
 deepseekClone/
 ├── lib/                  # Source code
 │   ├── api/              # API services
@@ -111,16 +111,16 @@ deepseekClone/
 ├── macos/                # macOS-specific files
 ├── windows/              # Windows-specific files
 └── pubspec.yaml          # Dependencies
-\`\`\`
+```
 
 ### Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
 
-\`\`\`
+```
 API_KEY=your_deepseek_api_key
 API_URL=https://api.deepseek.com
-\`\`\`
+```
 
 ## Technologies
 
