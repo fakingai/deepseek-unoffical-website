@@ -9,3 +9,4 @@ logs
 .next
 yarn-error.log
 npm-debug.log
+out

@@ -46,7 +46,22 @@ export function TestFlightModal({ open, onOpenChange }: TestFlightModalProps) {
                 height={192}
                 className="object-contain"
               />
-            </div> 
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Invitation Link:{" "}
+                <span 
+                className="font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded cursor-pointer" 
+                onClick={(e) => {
+                  const selection = window.getSelection();
+                  const range = document.createRange();
+                  range.selectNodeContents(e.currentTarget);
+                  selection?.removeAllRanges();
+                  selection?.addRange(range);
+                }}
+                >
+                https://testflight.apple.com/join/K5P7DSQ6
+                </span>
+            </p>
           </div>
         </div>
         <DialogFooter className="flex flex-col-reverse sm:flex-row sm:justify-between sm:space-x-2">
