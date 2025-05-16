@@ -46,11 +46,7 @@ export function TestFlightModal({ open, onOpenChange }: TestFlightModalProps) {
                 height={192}
                 className="object-contain"
               />
-            </div>
-            <p className="text-sm text-muted-foreground">
-              Invitation Code:{" "}
-              <span className="font-mono bg-gray-100 dark:bg-gray-800 px-2 py-1 rounded">ABCD-EFGH-IJKL</span>
-            </p>
+            </div> 
           </div>
         </div>
         <DialogFooter className="flex flex-col-reverse sm:flex-row sm:justify-between sm:space-x-2">
